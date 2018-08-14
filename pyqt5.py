@@ -318,6 +318,7 @@ class Tetrominoe(object):
     MirroredLShape = 7
 
 
+
 class Shape(object):
     coordsTable = (
         ((0, 0), (0, 0), (0, 0), (0, 0)),
