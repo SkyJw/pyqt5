@@ -24,17 +24,23 @@ class MyCal(QWidget):
 		print(positions)
 
 		for position, name in zip(positions, names):
+
+			if name == '=':
+				continue
 			button = QPushButton(name)
 			grid.addWidget(button, *position)
 
+		button = QPushButton(names[19])
+		grid.addWidget(button, *[3, 4, 2, 1])
+
 		button = QPushButton(names[20])
-		grid.addWidget(button, *[4, 0])
+		grid.addWidget(button, *[4, 0, 1, 2])
 
 		button = QPushButton(names[21])
-		grid.addWidget(button, *[4, 1])
+		grid.addWidget(button, *[4, 2])
 
 		button = QPushButton(names[22])
-		grid.addWidget(button, *[4, 2])
+		grid.addWidget(button, *[4, 3])
 
 		self.move(300, 150)
 		self.setWindowTitle('Calculator')
